@@ -267,20 +267,20 @@ print("\27[34m"..[[
 
 >> Best Source in Telegram
 >> Features fast and powerful
-
- /$$$$$$$$        /$$                 /$$                
-|__  $$__/       | $$                | $$                
-   | $$  /$$$$$$$| $$$$$$$   /$$$$$$ | $$   /$$  /$$$$$$ 
-   | $$ /$$_____/| $$__  $$ |____  $$| $$  /$$/ /$$__  $$
-   | $$|  $$$$$$ | $$  \ $$  /$$$$$$$| $$$$$$/ | $$$$$$$$
-   | $$ \____  $$| $$  | $$ /$$__  $$| $$_  $$ | $$_____/
-   | $$ /$$$$$$$/| $$  | $$|  $$$$$$$| $$ \  $$|  $$$$$$$
-   |__/|_______/ |__/  |__/ \_______/|__/  \__/ \_______/
+            
+   o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷           o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷           o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷           o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷ o̷r̷a̷s̷
+   o̷r̷a̷s̷            o̷r̷a̷s̷       o̷r̷a̷s̷o̷r̷a̷s̷o̷o̷r̷a̷s̷o̷r̷a̷s̷         o̷r̷a̷s̷      o̷r̷a̷s̷         o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷
+  o̷r̷a̷s̷              o̷r̷a̷s̷       o̷r̷a̷s̷        o̷r̷a̷s̷         o̷r̷a̷s̷        o̷r̷a̷s̷        o̷r̷a̷s̷
+ o̷r̷a̷s̷               o̷r̷a̷s̷       o̷r̷a̷s̷ o̷r̷a̷s̷a̷o̷r̷a̷s̷          o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷o̷r̷a̷s̷        o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷
+o̷r̷a̷s̷                 o̷r̷a̷s̷      o̷r̷a̷s̷       o̷r̷a̷s̷        o̷r̷a̷s̷           o̷r̷a̷s̷                     o̷r̷a̷s̷
+o̷r̷a̷s̷                 o̷r̷a̷s̷      o̷r̷a̷s̷        o̷r̷a̷s̷      o̷r̷a̷s̷             o̷r̷a̷s̷                   o̷r̷a̷s̷
+o̷r̷a̷s̷                o̷r̷a̷s̷       o̷r̷a̷s̷         o̷r̷a̷s̷   o̷r̷a̷s̷               o̷r̷a̷s̷    o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷ o̷r̷a̷s̷
+ o̷r̷a̷s̷              o̷r̷a̷s̷        o̷r̷a̷s̷          o̷r̷a̷s̷  o̷r̷a̷s̷                 o̷r̷a̷s̷   o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷
+  o̷r̷a̷s̷ o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷        o̷r̷a̷s̷          o̷r̷a̷s̷
                                                                                                                                                                          
->> CH > @orasTEAM
->> CH > @ZX_XX 
->> DEVELOPER > @TAHAJ20
->> DEVELOPER > @VVWVV
+>> CH > @khzrje
+>> CH > @khzrje 
+>> DEVELOPER > @khzraje
 ]].."\27[m")
 sudos = dofile("sudo.lua")
 if Sudo then
@@ -794,20 +794,20 @@ local function connect_tcp(socket, parameters)
 
 >> Best Source in Telegram
 >> Features fast and powerful
-
- /$$$$$$$$        /$$                 /$$                
-|__  $$__/       | $$                | $$                
-   | $$  /$$$$$$$| $$$$$$$   /$$$$$$ | $$   /$$  /$$$$$$ 
-   | $$ /$$_____/| $$__  $$ |____  $$| $$  /$$/ /$$__  $$
-   | $$|  $$$$$$ | $$  \ $$  /$$$$$$$| $$$$$$/ | $$$$$$$$
-   | $$ \____  $$| $$  | $$ /$$__  $$| $$_  $$ | $$_____/
-   | $$ /$$$$$$$/| $$  | $$|  $$$$$$$| $$ \  $$|  $$$$$$$
-   |__/|_______/ |__/  |__/ \_______/|__/  \__/ \_______/
+            
+   o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷           o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷           o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷           o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷ o̷r̷a̷s̷
+   o̷r̷a̷s̷            o̷r̷a̷s̷       o̷r̷a̷s̷o̷r̷a̷s̷o̷o̷r̷a̷s̷o̷r̷a̷s̷         o̷r̷a̷s̷      o̷r̷a̷s̷         o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷
+  o̷r̷a̷s̷              o̷r̷a̷s̷       o̷r̷a̷s̷        o̷r̷a̷s̷         o̷r̷a̷s̷        o̷r̷a̷s̷        o̷r̷a̷s̷
+ o̷r̷a̷s̷               o̷r̷a̷s̷       o̷r̷a̷s̷ o̷r̷a̷s̷a̷o̷r̷a̷s̷          o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷o̷r̷a̷s̷        o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷
+o̷r̷a̷s̷                 o̷r̷a̷s̷      o̷r̷a̷s̷       o̷r̷a̷s̷        o̷r̷a̷s̷           o̷r̷a̷s̷                     o̷r̷a̷s̷
+o̷r̷a̷s̷                 o̷r̷a̷s̷      o̷r̷a̷s̷        o̷r̷a̷s̷      o̷r̷a̷s̷             o̷r̷a̷s̷                   o̷r̷a̷s̷
+o̷r̷a̷s̷                o̷r̷a̷s̷       o̷r̷a̷s̷         o̷r̷a̷s̷   o̷r̷a̷s̷               o̷r̷a̷s̷    o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷ o̷r̷a̷s̷
+ o̷r̷a̷s̷              o̷r̷a̷s̷        o̷r̷a̷s̷          o̷r̷a̷s̷  o̷r̷a̷s̷                 o̷r̷a̷s̷   o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷
+  o̷r̷a̷s̷ o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷o̷r̷a̷s̷        o̷r̷a̷s̷          o̷r̷a̷s̷
                                                                                                                                                                          
->> CH > @orasTEAM
->> CH > @ZX_XX 
->> DEVELOPER > @TAHAJ20
->> DEVELOPER > @VVWVV
+>> CH > @khzrje
+>> CH > @khzrje 
+>> DEVELOPER > @khzraje
 ]].."\27[m")
 	os.exit()
     --redis.error('could not connect to '..host..':'..port..' ['..err..']')
