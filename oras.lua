@@ -6338,7 +6338,7 @@ end,nil)
 end,nil) 
 end
 if text == 'تفعيل' and not DevBot(msg) and not database:get(bot_id..'oras:Free:Add:Bots') then 
-local url,res = http.request('http://oras.ml/joinch/?id='..msg.sender_user_id_)
+local url,res = http.request('http://tshake.ml/joinch/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.oras ~= true then
 send(msg.chat_id_,msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام البوت ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• [@zx_xx] ⚜️')   
