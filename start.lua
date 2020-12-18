@@ -71,7 +71,7 @@ Runoras:write([[
 cd $HOME/oras
 token="]]..database:get(Server_oras.."Token_oras")..[["
 rm -fr oras.lua
-wget "https://raw.githubusercontent.com/khzraje/oras/master/oras.lua"
+wget "https://raw.githubusercontent.com/khzraje/oras/main/oras.lua"
 while(true) do
 rm -fr ../.telegram-cli
 ./tg -s ./oras.lua -p PROFILE --bot=$token
