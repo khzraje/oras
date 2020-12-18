@@ -6694,7 +6694,7 @@ sendDocument(msg.chat_id_, msg.id_,'./File_Libs/'..bot_id..'.json', '📮┇ ع�
 end
 if text == "تحديث السورس 📥" then
 send(msg.chat_id_,msg.id_,'☑┇تم التحديث')
-os.execute('rm -rf Tshake.lua')
+os.execute('rm -rf oras.lua')
 os.execute('rm -rf start.lua')
 download_to_file('https://raw.githubusercontent.com/khzraje/oras/main/oras.lua', 'oras.lua') 
 download_to_file('https://raw.githubusercontent.com/khzraje/oras/main/start.lua', 'start.lua') 
