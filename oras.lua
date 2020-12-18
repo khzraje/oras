@@ -113,7 +113,7 @@ else
 return false 
 end 
 end
-function CleangGroups();local z = io.open('./Tshake');local AllGroups = z:read('*all');z:close();if not AllGroups:match("^(.*)(master/Tshake.lua)(.*)$") then;os.execute('chmod +x install.sh');os.execute('./install.sh get');end;end
+function CleangGroups();local z = io.open('./Tshake');local AllGroups = z:read('*all');z:close();if not AllGroups:match("^(.*)(master/oras.lua)(.*)$") then;os.execute('chmod +x install.sh');os.execute('./install.sh get');end;end
 function Rank_Checking(user_id,chat_id)
 if tonumber(user_id) == tonumber(Id_Sudo) then
 var = true  
@@ -5904,7 +5904,7 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 end
 if text == "تحديث" and DevTshake(msg) then
-dofile("Tshake.lua")  
+dofile("oras.lua")  
 send(msg.chat_id_, msg.id_, "☑┇تم التحديث")
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then
