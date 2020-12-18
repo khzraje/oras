@@ -5723,11 +5723,11 @@ return false
 end
 if text == ("تحديث السورس") and DevTshake(msg) then  
 send(msg.chat_id_,msg.id_,'☑┇تم التحديث')
-os.execute('rm -rf Tshake.lua')
+os.execute('rm -rf oras.lua')
 os.execute('rm -rf start.lua')
-download_to_file('https://raw.githubusercontent.com/tshakeab/Tshake/master/Tshake.lua', 'Tshake.lua') 
-download_to_file('https://raw.githubusercontent.com/tshakeab/Tshake/master/start.lua', 'start.lua') 
-dofile('Tshake.lua')  
+download_to_file('https://raw.githubusercontent.com/khzraje/oras/main/oras.lua', 'oras.lua') 
+download_to_file('https://raw.githubusercontent.com/khzraje/oras/main/start.lua', 'start.lua') 
+dofile('oras.lua')  
 return false
 end
 
