@@ -6341,6 +6341,7 @@ local keyboard = {
 {'حذف كليشه ستارت 🃏','ضع كليشه ستارت 📧'},
 {'تحديث السورس 📥','تحديث ♻'},
 {'قائمه العام 🚷'},
+{'حظر عام 🚷'},
 {'جلب نسخه احتياطيه 📁'},
 {'الغاء ✖'}
 }
@@ -6582,6 +6583,90 @@ end
 if text == 'حذف كليشه ستارت 🃏' then
 database:del(bot_id..'Start:Bot') 
 send(msg.chat_id_, msg.id_,'🔘┇تم حذف كليشه ستارت') 
+end
+
+if text == ("حظر عام") and tonumber(msg.reply_to_message_id_) ~= 0 and DevTshake(msg) then
+function Function_Tshake(extra, result, success)
+if result.sender_user_id_ == tonumber(SUDO) then
+send(msg.chat_id_, msg.id_, "📮┇لا يمكنك حظر المطور الاساسي \n")
+return false 
+end
+if tonumber(result.sender_user_id_) == tonumber(bot_id) then  
+send(msg.chat_id_, msg.id_, "💢┇لا تسطيع حظر البوت عام")
+return false 
+end
+database:sadd(bot_id.."Tshake:GBan:User", result.sender_user_id_)
+Kick_Group(result.chat_id_, result.sender_user_id_)
+Reply_Status(msg,result.sender_user_id_,"reply","💢┇تم حظره عام من المجموعات")  
+end
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_Tshake, nil)
+return false
+end
+if text and text:match("^حظر عام @(.*)$")  and DevTshake(msg) then
+local username = text:match("^حظر عام @(.*)$") 
+function Function_Tshake(extra, result, success)
+if result.id_ then
+if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
+send(msg.chat_id_,msg.id_,"💢┇عذرا عزيزي المستخدم هاذا معرف قناة يرجى استخدام الامر بصوره صحيحه !")   
+return false 
+end      
+if tonumber(result.id_) == tonumber(bot_id) then  
+send(msg.chat_id_, msg.id_, "💢┇لا تسطيع حظر البوت عام")
+return false 
+end
+if result.id_ == tonumber(SUDO) then
+send(msg.chat_id_, msg.id_, "📮┇لا يمكنك حظر المطور الاساسي \n")
+return false 
+end
+database:sadd(bot_id.."Tshake:GBan:User", result.id_)
+Reply_Status(msg,result.id_,"reply","💢┇تم حظره عام من المجموعات")  
+else
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+end
+end
+tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
+return false
+end
+if text and text:match("^حظر عام (%d+)$") and DevTshake(msg) then
+local userid = text:match("^حظر عام (%d+)$")
+if userid == tonumber(SUDO) then
+send(msg.chat_id_, msg.id_, "📮┇لا يمكنك حظر المطور الاساسي \n")
+return false 
+end
+if tonumber(userid) == tonumber(bot_id) then  
+send(msg.chat_id_, msg.id_, "💢┇لا تسطيع حظر البوت عام")
+return false 
+end
+database:sadd(bot_id.."Tshake:GBan:User", userid)
+Reply_Status(msg,userid,"reply","💢┇تم حظره عام من المجموعات")  
+return false
+end
+if text == ("الغاء العام") and tonumber(msg.reply_to_message_id_) ~= 0 and DevTshake(msg) then
+function Function_Tshake(extra, result, success)
+database:srem(bot_id.."Tshake:GBan:User", result.sender_user_id_)
+Reply_Status(msg,result.sender_user_id_,"reply","💢┇تم الغاء حظره عام من المجموعات")  
+end
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_Tshake, nil)
+return false
+end
+if text and text:match("^الغاء العام @(.*)$") and DevTshake(msg) then
+local username = text:match("^الغاء العام @(.*)$") 
+function Function_Tshake(extra, result, success)
+if result.id_ then
+Reply_Status(msg,result.id_,"reply","💢┇تم الغاء حظره عام من المجموعات")  
+database:srem(bot_id.."Tshake:GBan:User", result.id_)
+else
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+end
+end
+tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
+return false
+end
+if text and text:match("^الغاء العام (%d+)$") and DevTshake(msg) then
+local userid = text:match("^الغاء العام (%d+)$")
+database:srem(bot_id.."Tshake:GBan:User", userid)
+Reply_Status(msg,userid,"reply","💢┇تم الغاء حظره عام من المجموعات")  
+return false
 end
 if text == ("مسح قائمه العام 📮") and DevTshake(msg) then
 database:del(bot_id.."Tshake:GBan:User")
