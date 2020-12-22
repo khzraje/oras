@@ -32,10 +32,10 @@ o̷r̷a̷s̷                o̷r̷a̷s̷       o̷r̷a̷s̷         o̷r̷a̷s̷
 >> DEVELOPER > @khzraje
 ]].."\27[m")
 
-io.popen("mkdir Tshake_Files")
+io.popen("mkdir oras_Files")
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
-for v in io.popen('ls Tshake_Files'):lines() do
+for v in io.popen('ls oras_Files'):lines() do
 if v:match(".lua$") then
 i = i + 1
 t = t.."\27[39m"..i.."\27[36m".." - \27[10;32m"..v..",\27[m \n"
@@ -555,10 +555,10 @@ database:sadd(bot_id.."Tshake:Muted:User"..msg.chat_id_,msg.sender_user_id_)
 return false  
 end
 end  
-function Tshake_Files(msg)
-for v in io.popen('ls Tshake_Files'):lines() do
+function oras_Files(msg)
+for v in io.popen('ls oras_Files'):lines() do
 if v:match(".lua$") then
-plugin = dofile("Tshake_Files/"..v)
+plugin = dofile("oras_Files/"..v)
 if plugin.Tshake and msg then
 pre_msg = plugin.Tshake(msg)
 end
@@ -5831,7 +5831,7 @@ end
 if text == 'الملفات' and DevTshake(msg) then
 t = '☑┇جميع الملفات : \n ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ \n'
 i = 0
-for v in io.popen('ls Tshake_Files'):lines() do
+for v in io.popen('ls oras_Files'):lines() do
 if v:match(".lua$") then
 i = i + 1
 t = t..i..'*~ '..v..'*\n'
@@ -6940,7 +6940,7 @@ data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..Name_Bot..
 end
 ------------------------------------------------------------------------
 Tshake_Started_Bot(msg,data)
-Tshake_Files(msg)
+oras_Files(msg)
 elseif (data.ID == "UpdateMessageEdited") then
 local msg = data
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.message_id_)},function(extra, result, success)
