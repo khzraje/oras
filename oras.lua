@@ -2114,7 +2114,7 @@ end
 database:sadd(bot_id.."Tshake:GBan:User", result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم حظره عام من المجموعات")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -2149,7 +2149,7 @@ if result.id_ then
 Reply_Status(msg,result.id_,"reply","💢┇تم الغاء حظره عام من المجموعات")  
 database:srem(bot_id.."Tshake:GBan:User", result.id_)
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -2181,7 +2181,7 @@ end
 database:sadd(bot_id.."Tshake:Sudo:User", result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم ترقيته مطور في البوت")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -2208,7 +2208,7 @@ if result.id_ then
 database:srem(bot_id.."Tshake:Sudo:User", result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم تنزيله من المطورين")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -2252,7 +2252,7 @@ end
 database:sadd(bot_id.."Tshake:Basic:Constructor"..msg.chat_id_, result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم ترقيته منشئ اساسي")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -2298,7 +2298,7 @@ database:srem(bot_id.."Tshake:Basic:Constructor"..msg.chat_id_, result.id_)
 
 Reply_Status(msg,result.id_,"reply","💢┇تم تنزيله من المنشئين")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -2347,7 +2347,7 @@ end
 database:sadd(bot_id.."Tshake:Constructor"..msg.chat_id_, result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم ترقيته منشئ في المجموعه")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -2385,7 +2385,7 @@ if result.id_ then
 database:srem(bot_id.."Tshake:Constructor"..msg.chat_id_, result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم تنزيله من المنشئين")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -2434,7 +2434,7 @@ end
 database:sadd(bot_id.."Tshake:Manager"..msg.chat_id_, result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم ترقيته مدير المجموعه")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -2480,7 +2480,7 @@ if result.id_ then
 database:srem(bot_id.."Tshake:Manager"..msg.chat_id_, result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم تنزيله من المدراء")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -2538,7 +2538,7 @@ end
 database:sadd(bot_id.."Tshake:Mod:User"..msg.chat_id_, result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم ترقيته ادمن للمجموعه")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -2587,7 +2587,7 @@ if result.id_ then
 database:srem(bot_id.."Tshake:Mod:User"..msg.chat_id_, result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم تنزيله من ادمنيه المجموعه")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -2645,7 +2645,7 @@ end
 database:sadd(bot_id.."Tshake:Special:User"..msg.chat_id_, result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم ترقيته مميز للمجموعه")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -2696,7 +2696,7 @@ if result.id_ then
 database:srem(bot_id.."Tshake:Special:User"..msg.chat_id_, result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم تنزيله من المميزين")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -2907,7 +2907,7 @@ Reply_Status(msg,result.id_,"reply","💢┇تم حظره من المجموعه"
 end,nil)   
 end
 else
-send(msg.chat_id_, msg.id_, "💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_, "💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -2965,7 +2965,7 @@ database:srem(bot_id.."Tshake:Ban:User"..msg.chat_id_, result.id_)
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_id_ = result.id_, status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)   
 Reply_Status(msg,result.id_,"reply","💢┇تم الغاء حظره من هنا")  
 else
-send(msg.chat_id_, msg.id_, "💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_, "💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -3019,7 +3019,7 @@ end
 database:sadd(bot_id.."Tshake:Muted:User"..msg.chat_id_, result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم كتمه من هنا")  
 else
-send(msg.chat_id_, msg.id_, "💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_, "💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -3054,7 +3054,7 @@ if result.id_ then
 database:srem(bot_id.."Tshake:Muted:User"..msg.chat_id_, result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم الغاء كتمه من هنا")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -3096,7 +3096,7 @@ end
 https.request("https://api.telegram.org/bot"..token.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم تقييده في المجموعه")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -3193,7 +3193,7 @@ if result.id_ then
 https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" .. result.id_ .. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
 Reply_Status(msg,result.id_,"reply","💢┇تم الغاء تقييده")  
 else
-send(msg.chat_id_, msg.id_, "💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_, "💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -3261,7 +3261,7 @@ Reply_Status(msg,result.id_,"reply","💢┇تم طرده من هنا")
 end,nil)   
 end
 else
-send(msg.chat_id_, msg.id_, "💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_, "💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -5124,7 +5124,7 @@ local Add_Mem = database:get(bot_id.."Tshake:Add:Memp"..msg.chat_id_..":"..data.
 send(msg.chat_id_, msg.id_,'*🔘┇ايديه - '..Id..'\n📨┇رسائله - '..NumMsg..'\n📌┇معرفه - *['..UserName_User..']*\n📈┇تفاعله - '..TotalMsg..'\n🚸┇رتبته - '..Status_Gps..'\n⚡┇تعديلاته - '..message_edit..'\n💠┇جهاته - '..Add_Mem..'*') 
 end,nil)   
 else
-send(msg.chat_id_, msg.id_,'👤┇لا يوجد حساب بهاذا المعرف')
+send(msg.chat_id_, msg.id_,'👤┇لا يوجد حساب بـ هذا المعرف')
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -5571,7 +5571,7 @@ send(msg.chat_id_,msg.id_,"🔖┇ليس لديك جواهر من الالعاب
 else
 local NUM_GAMES = database:get(bot_id.."Tshak:Add:Num"..msg.chat_id_..msg.sender_user_id_)
 if tonumber(NUMPY) > tonumber(NUM_GAMES) then
-send(msg.chat_id_,msg.id_,"\n💢┇ليس لديك جواهر بهاذا العدد \n📬┇لزيادة مجوهراتك في اللعبه \n📌┇ارسل الالعاب وابدأ اللعب !") 
+send(msg.chat_id_,msg.id_,"\n💢┇ليس لديك جواهر بـ هذا العدد \n📬┇لزيادة مجوهراتك في اللعبه \n📌┇ارسل الالعاب وابدأ اللعب !") 
 return false 
 end
 local NUMNKO = (NUMPY * 50)
@@ -6622,7 +6622,7 @@ end
 database:sadd(bot_id.."Tshake:GBan:User", result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم حظره عام من المجموعات")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -6657,7 +6657,7 @@ if result.id_ then
 Reply_Status(msg,result.id_,"reply","💢┇تم الغاء حظره عام من المجموعات")  
 database:srem(bot_id.."Tshake:GBan:User", result.id_)
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -6800,7 +6800,7 @@ end
 database:sadd(bot_id.."Tshake:Sudo:User", result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم ترقيته مطور في البوت")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -6827,7 +6827,7 @@ if result.id_ then
 database:srem(bot_id.."Tshake:Sudo:User", result.id_)
 Reply_Status(msg,result.id_,"reply","💢┇تم تنزيله من المطورين")  
 else
-send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بـ هذا المعرف")
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
@@ -6966,7 +6966,7 @@ database:del(bot_id.."Tshake:Set:Cmd:Group:New"..msg.chat_id_)
 database:srem(bot_id.."Tshake:List:Cmd:Group:New"..msg.chat_id_,text)
 send(msg.chat_id_, msg.id_,"🔰┇تم ازالة الامر من المجموعه")  
 else
-send(msg.chat_id_, msg.id_,"🔰┇لا يوجد امر بهاذا الاسم تاكد من الامر واعد المحاوله")  
+send(msg.chat_id_, msg.id_,"🔰┇لا يوجد امر بـ هذا الاسم تاكد من الامر واعد المحاوله")  
 end
 database:del(bot_id.."Tshake:Del:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_)
 return false
@@ -6980,7 +6980,7 @@ end
 end
 local Name_Bot = (database:get(bot_id.."Tshake:Name:Bot") or "اوراس")
 if not database:get(bot_id.."Tshake:Fun_Bots"..msg.chat_id_) then
-if text ==  ""..Name_Bot..' شنو رئيك بهاذا' and tonumber(msg.reply_to_message_id_) > 0 then     
+if text ==  ""..Name_Bot..' شنو رئيك بـ هذا' and tonumber(msg.reply_to_message_id_) > 0 then     
 function FunBot(extra, result, success) 
 local Fun = {'لوكي وزاحف من ساع زحفلي وحضرته 😒','خوش ولد و ورده مال الله 🙄','يلعب ع البنات 🙄', 'ولد زايعته الكاع 😶🙊','صاك يخبل ومعضل ','محلو وشواربه جنها مكناسه 😂🤷🏼‍♀️','اموت عليه 🌝','هوه غير الحب مال اني ❤️','مو خوش ولد صراحه ☹️','ادبسز وميحترم البنات  ', 'فد واحد قذر 🙄😒','ماطيقه كل ما اكمشه ريحته جنها بخاخ بف باف مال حشرات 😂🤷‍♀️','مو خوش ولد 🤓' } 
 send(msg.chat_id_, result.id_,''..Fun[math.random(#Fun)]..'')   
