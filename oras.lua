@@ -6696,7 +6696,7 @@ send(msg.chat_id_, msg.id_, t)
 return false
 end
 if text == "حظر عام" then
-send(msg.chat_id_, msg.id_,"اكتب حظر عام ثم مسافه ثم اليوزر وقم بالارسال مثال * حظر عام @اليوزر ") 
+send(msg.chat_id_, msg.id_,"اكتب حظر عام ثم مسافه ثم اليوزر وقم بالارسال") 
 end
 if text == ("المطورين 🔱") and DevTshake(msg) then
 local list = database:smembers(bot_id.."Tshake:Sudo:User")
