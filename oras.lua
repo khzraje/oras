@@ -6341,6 +6341,7 @@ local keyboard = {
 {'حذف كليشه ستارت 🃏','ضع كليشه ستارت 📧'},
 {'تحديث السورس 📥','تحديث ♻'},
 {'قائمه العام 🚷'},
+{'اضف مطور'},
 {'حظر عام 🚷'},
 {'جلب نسخه احتياطيه 📁'},
 {'الغاء ✖'}
@@ -6776,6 +6777,64 @@ local File = io.open('./File_Libs/'..bot_id..'.json', "w")
 File:write(t)
 File:close()
 sendDocument(msg.chat_id_, msg.id_,'./File_Libs/'..bot_id..'.json', '📮┇ عدد مجموعات التي في البوت { '..#list..'}')
+end
+if text == ("اضف مطور") and tonumber(msg.reply_to_message_id_) ~= 0 and DevTshake(msg) then
+function Function_Tshake(extra, result, success)
+database:sadd(bot_id.."Tshake:Sudo:User", result.sender_user_id_)
+Reply_Status(msg,result.sender_user_id_,"reply","💢┇تم ترقيته مطور في البوت")  
+end
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_Tshake, nil)
+return false 
+end
+if text and text:match("^اضف مطور @(.*)$") and DevTshake(msg) then
+local username = text:match("^اضف مطور @(.*)$")
+function Function_Tshake(extra, result, success)
+if result.id_ then
+if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
+send(msg.chat_id_,msg.id_,"💢┇عذرا عزيزي المستخدم هاذا معرف قناة يرجى استخدام الامر بصوره صحيحه !")   
+return false 
+end      
+database:sadd(bot_id.."Tshake:Sudo:User", result.id_)
+Reply_Status(msg,result.id_,"reply","💢┇تم ترقيته مطور في البوت")  
+else
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+end
+end
+tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
+return false 
+end
+if text and text:match("^اضف مطور (%d+)$") and DevTshake(msg) then
+local userid = text:match("^اضف مطور (%d+)$")
+database:sadd(bot_id.."Tshake:Sudo:User", userid)
+Reply_Status(msg,userid,"reply","💢┇تم ترقيته مطور في البوت")  
+return false 
+end
+if text == ("حذف مطور") and tonumber(msg.reply_to_message_id_) ~= 0 and DevTshake(msg) then
+function Function_Tshake(extra, result, success)
+database:srem(bot_id.."Tshake:Sudo:User", result.sender_user_id_)
+Reply_Status(msg,result.sender_user_id_,"reply","💢┇تم تنزيله من المطورين")  
+end
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, Function_Tshake, nil)
+return false 
+end
+if text and text:match("^حذف مطور @(.*)$") and DevTshake(msg) then
+local username = text:match("^حذف مطور @(.*)$")
+function Function_Tshake(extra, result, success)
+if result.id_ then
+database:srem(bot_id.."Tshake:Sudo:User", result.id_)
+Reply_Status(msg,result.id_,"reply","💢┇تم تنزيله من المطورين")  
+else
+send(msg.chat_id_, msg.id_,"💢┇لا يوجد حساب بهاذا المعرف")
+end
+end
+tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Tshake, nil)
+return false
+end  
+if text and text:match("^حذف مطور (%d+)$") and DevTshake(msg) then
+local userid = text:match("^حذف مطور (%d+)$")
+database:srem(bot_id.."Tshake:Sudo:User", userid)
+Reply_Status(msg,userid,"reply","💢┇تم تنزيله من المطورين")  
+return false 
 end
 if text == "تحديث السورس 📥" then
 send(msg.chat_id_,msg.id_,'☑┇تم التحديث')
