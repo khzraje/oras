@@ -182,14 +182,6 @@ Var = false
 end
 return Var
 end 
-function Warning_Groups(Chat_id,User_id) 
-if database:sismember(bot_id.."Tshake:Ban:User"..Chat_id,User_id) then
-Var = true
-else
-Var = false
-end
-return Var
-end 
 function Ban_All_Groups(User_id) 
 if database:sismember(bot_id.."Tshake:GBan:User",User_id) then
 Var = true
@@ -2540,7 +2532,7 @@ end
 function Function_Tshake(extra, result, success)
 if result.id_ then
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-send(msg.chat_id_,msg.id_,"💢┇عذرا عزيزي المستخدم هذا معرف قناة يرجى استخدام الامر بصوره صحيحة !")   
+send(msg.chat_id_,msg.id_,"💢┇عذرا عزيزي المستخدم هذا معرف قناة يرجى استخدام الامر بصوره صحيحه !")   
 return false 
 end      
 database:sadd(bot_id.."Tshake:Mod:User"..msg.chat_id_, result.id_)
@@ -3214,21 +3206,6 @@ https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?ch
 Reply_Status(msg,userid,"reply","💢┇تم الغاء تقييده")  
 return false
 end
-
-if text == ("تحذير") and msg.reply_to_message_id_ ~=0 and Addictive(msg) then
-if not Constructor(msg) and database:get(bot_id.."Warning:Cheking"..msg.chat_id_) then 
-send(msg.chat_id_, msg.id_,'💢┇لقد تم تعطيل التحذير من قبل المنشئين')
-return false
-end
-(result.chat_id_, result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply","⛔️تحذير⛔️
-اذا تعيدها يتم اخذ احد الاجرائات التاليه  :-
-1- كتم
-2- طرد
-3- حظر
-⛔️تحذير⛔️")  
-end,nil)
-
 if text == ("طرد") and msg.reply_to_message_id_ ~=0 and Addictive(msg) then
 if not Constructor(msg) and database:get(bot_id.."Ban:Cheking"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'💢┇لقد تم تعطيل الحظر و الطرد من قبل المنشئين')
@@ -3315,20 +3292,7 @@ end,nil)
 end
 return false
 end
-if text == "تعطيل التحذير" or text == "تعطيل تحذير" then
-if Constructor(msg) then
-database:set(bot_id.."Warning:Cheking"..msg.chat_id_,"true")
-send(msg.chat_id_, msg.id_, '🔏┇تم تعطيل » التحذير  ')
-return false
-end
-end
-if text == "تفعيل تحذير" or text == "تفعيل التحذير" then
-if Constructor(msg) then
-database:del(bot_id.."Warning:Cheking"..msg.chat_id_)
-send(msg.chat_id_, msg.id_, '☑┇تم تفعيل » التحذير ')
-return false
-end
-end
+
 if text == "تعطيل الطرد" or text == "تعطيل الحظر" then
 if Constructor(msg) then
 database:set(bot_id.."Ban:Cheking"..msg.chat_id_,"true")
@@ -6003,7 +5967,6 @@ Text = [[
 🔐┇التكرار
 🔐┇الكلايش
 🔐┇السيلفي
-⛔️┇التحذير
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 📡┇Ch ~⪼ @khzrje
 ]]
