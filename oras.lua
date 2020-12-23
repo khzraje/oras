@@ -4520,16 +4520,6 @@ send(msg.chat_id_, msg.id_, namebot[name])
 return false 
 end
 
-if text == ("تحذير") and msg.reply_to_message_id_ ~=0 and Addictive(msg) then
-(result.chat_id_, result.sender_user_id_)
-Reply_Status(msg,result.sender_user_id_,"reply","⛔️تحذير⛔️
-اذا تعيدها يتم اخذ احد الاجرائات التاليه  :-
-1- كتم
-2- طرد
-3- حظر
-⛔️تحذير⛔️")  
-end
-
 if text == "بوت" then
 Namebot = (database:get(bot_id.."Tshake:Name:Bot") or "اوراس")
 send(msg.chat_id_, msg.id_,"اسمي القميل ["..Namebot.."] ") 
