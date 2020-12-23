@@ -2540,7 +2540,7 @@ end
 function Function_Tshake(extra, result, success)
 if result.id_ then
 if (result and result.type_ and result.type_.ID == "ChannelChatInfo") then
-send(msg.chat_id_,msg.id_,"💢┇عذرا عزيزي المستخدم هذا معرف قناة يرجى استخدام الامر بصوره صحيحه !")   
+send(msg.chat_id_,msg.id_,"💢┇عذرا عزيزي المستخدم هذا معرف قناة يرجى استخدام الامر بصوره صحيحة !")   
 return false 
 end      
 database:sadd(bot_id.."Tshake:Mod:User"..msg.chat_id_, result.id_)
