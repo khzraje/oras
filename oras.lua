@@ -526,14 +526,11 @@ if v.ASAS then
 for k,idASAS in pairs(v.ASAS) do
 database:sadd(bot_id.."Tshake:Basic:Constructor"..idg,idASAS)  
 end;end
-for k,idRDODM in pairs(v.RDODM) do
-database:sadd(bot_id.."Tshake:List:Manager"..idg,idRDODM)  
-end;end
 if v.linkgroup then
 if v.linkgroup ~= "" then
 database:set(bot_id.."Tshake:Private:Group:Link"..idg,v.linkgroup)   
 end;end;end
-send(chat,msg.id_,"🔰┇تم رفع الملف بنجاح وتفعيل المجموعات\n📬┇ورفع {الامنشئين الاساسين ; والمنشئين ; والمدراء; والادمنيه ، والردود بالنجاح} بنجاح")   
+send(chat,msg.id_,"🔰┇تم رفع الملف بنجاح وتفعيل المجموعات\n📬┇ورفع {الامنشئين الاساسين ; والمنشئين ; والمدراء; والادمنيه} بنجاح")   
 end
 
 function Is_Not_Spam(msg,type)
@@ -5730,7 +5727,6 @@ ASAS = database:smembers(bot_id.."Tshake:Basic:Constructor"..v)
 MNSH = database:smembers(bot_id.."Tshake:Constructor"..v)
 MDER = database:smembers(bot_id.."Tshake:Manager"..v)
 MOD = database:smembers(bot_id.."Tshake:Mod:User"..v)
-RDODM = database:smembers(bot_id.."Tshake:List:Manager"..msg.chat_id_.."")
 link = database:get(bot_id.."Tshake:Link_Group"..v) or ''
 if k == 1 then
 t = t..'"'..v..'":{"Tshake":"'..NAME..'",'
