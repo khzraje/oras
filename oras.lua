@@ -3300,6 +3300,89 @@ send(msg.chat_id_, msg.id_, '🔏┇تم تعطيل » الحظر ~ والطرد
 return false
 end
 end
+[Forwarded from - 𝐓𝐄𝐀𝐌 ORAS 🌿🤖 (🅒 🅞 🅓 🅔)]
+$USAIED = json_decode(file_get_contents('php://input'));
+$SAIEDM = $USAIED->message;
+$SAIEDT = $SAIEDM->text;
+$SAIEDC = $SAIEDM->chat->id;
+$DSAIED= $USAIED->callback_query;
+$DSAIEDD = $DSAIED->data;
+$SAIEDNEW = $SAIEDM->new_chat_member;
+$SAIEDN = $SAIEDNEW->first_name;
+$SAIEDI = $SAIEDNEW->id;
+$DSAIEDN = $DSAIED->from->first_name;
+$DSAIEDI = $DSAIED->from->id;
+$DSAIEDC = $DSAIED->message->chat->id;
+mkdir("SAIED");
+$SAIEDRO = file_get_contents("SAIED/RO$SAIEDC.txt");
+if($SAIEDT == "تفعيل التحقق"  and $SAIEDRO != "ON"){
+bot('sendmessage',[
+'chat_id'=>$SAIEDC,
+'text'=>"• تم تفعيل التحقق من الروبوتات 👨‍✈️.
+• سيتم تقييد اي شخص ينضم الى المجموعة ولن يستطيع ارسال الرسائل حتى يضغط على زر انا لست روبوت 📛.",
+'reply_to_message_id'=>$SAIEDM->message_id,
+]);
+file_put_contents("SAIED/RO$SAIEDC.txt","ON");
+}
+if($SAIEDT == "تفعيل التحقق"  and $SAIEDRO == "ON"){
+bot('sendmessage',[
+'chat_id'=>$SAIEDC,
+'text'=>"• تم تفعيل التحقق من الروبوتات بالتأكيد 👨‍✈️.",
+'reply_to_message_id'=>$SAIEDM->message_id,
+]);
+}
+if($SAIEDT == "تعطيل التحقق"  and $SAIEDRO == "ON"){
+bot('sendmessage',[
+'chat_id'=>$SAIEDC,
+'text'=>"• تم تعطيل التحقق من الروبوتات 🛑.
+• الان يستطيع اي شخص ينضم الى المجموعة ارسال الرسائل فيها 📝.",
+'reply_to_message_id'=>$SAIEDM->message_id,
+]);
+unlink("SAIED/RO$SAIEDC.txt");
+}
+if($SAIEDT == "تعطيل التحقق"  and $SAIEDRO != "ON"){
+bot('sendmessage',[
+'chat_id'=>$SAIEDC,
+'text'=>"• تم تعطيل التحقق من الروبوتات بالتأكيد 🛑.",
+'reply_to_message_id'=>$SAIEDM->message_id,
+]);
+}
+if($SAIEDNEW and $SAIEDRO == "ON"){
+bot('restrictChatMember',[
+'chat_id'=>$SAIEDC,
+'user_id'=>$SAIEDI,
+]);
+ bot('sendMessage',[
+'chat_id'=>$SAIEDC,
+'text'=>"• اهلا بك يا [$SAIEDN](tg://user?id=$SAIEDI) ❤️.
+• المعذرة تم تقييدك من ارسال الرسائل ⚠️.
+• يرجى الضغط على أنا لست روبوت الموجودة في الأسفل حتى يتم فك التقييد عنك 🛑.",
+'parse_mode'=>"MarkDown",
+'reply_markup'=>json_encode([ 
+'inline_keyboard'=>[
+[["text"=>"• انا لست ربوت 📛","callback_data"=>"RoBot-$SAIEDI"]],
+]])
+]);
+}
+$ROSAIED = explode('-', $DSAIEDD);
+if($DSAIEDD == "RoBot-$ROSAIED[1]" and $DSAIEDI == $ROSAIED[1]){
+bot('promoteChatMember',[
+'chat_id'=>$DSAIEDC,
+'user_id'=>$DSAIEDI,
+]);
+bot('EditMessageText',[
+'chat_id'=>$DSAIEDC,
+'message_id'=>$DSAIED->message->message_id,
+'text'=>"• أهلا بك يا [$DSAIEDN](tg://user?id=$DSAIEDI) ❤️.
+• تم الغاء التقييد عنك بنجاح يمكنك ارسال الرسائل الآن 📝.",
+'parse_mode'=>"MarkDown",
+]);
+}else{
+bot('answerCallbackQuery',[
+'callback_query_id'=>$DSAIED->id,
+'text'=>"• الأمر ليس لك 🌚", 
+]);
+}
 if text == "تفعيل الطرد" or text == "تفعيل الحظر" then
 if Constructor(msg) then
 database:del(bot_id.."Ban:Cheking"..msg.chat_id_)
