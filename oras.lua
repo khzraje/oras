@@ -3939,12 +3939,12 @@ end
 end
 
 if text == "اضف رد للكل" and DevTshake(msg) then 
-send(msg.chat_id_, msg.id_,"📥┇ ارسل الكلمه التري تريد اضافتها")
+send(msg.chat_id_, msg.id_,"📥┇ ارسل الكلمه التي تريد اضافتها")
 database:set(bot_id.."Tshake:Set:Rd"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return false 
 end
 if text == "حذف رد للكل" and DevTshake(msg) then 
-send(msg.chat_id_, msg.id_,"📫┇ ارسل الكلمه التري تريد حذفها")
+send(msg.chat_id_, msg.id_,"📫┇ ارسل الكلمه التي تريد حذفها")
 database:set(bot_id.."Tshake:Set:On"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return false 
 end
