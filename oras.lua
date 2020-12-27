@@ -5741,6 +5741,83 @@ end
 end
 send(msg.chat_id_, msg.id_,t)
 end
+if text == "متجر الملفات" or text == 'المتجر' then
+if DevTshake(msg) then
+local Get_Files, res = https.request("https://raw.githubusercontent.com/khzraje/files_tshake/master/getfile.json")
+if res == 200 then
+local Get_info, res = pcall(JSON.decode,Get_Files);
+vardump(res.plugins_)
+if Get_info then
+local TextS = "\n📂┇اهلا بك في متجر ملفات تشاكي \n📮┇الملفات الموجوده حاليا \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n\n"
+local TextE = "\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n📌┇تدل علامة (✔) الملف مفعل\n".."📌┇تدل علامة (✖) الملف معطل\n"
+local NumFile = 0
+for name,Info in pairs(res.plugins_) do
+local Check_File_is_Found = io.open("Tshake_Files/"..name,"r")
+if Check_File_is_Found then
+io.close(Check_File_is_Found)
+CeckFile = "(✔)"
+else
+CeckFile = "(✖)"
+end
+NumFile = NumFile + 1
+TextS = TextS..'*'..NumFile.."~⪼* {`"..name..'`} » '..CeckFile..'\n[- File Information]('..Info..')\n'
+end
+send(msg.chat_id_, msg.id_,TextS..TextE) 
+end
+else
+send(msg.chat_id_, msg.id_,"📮┇ لا يوجد اتصال من ال api \n") 
+end
+return false
+end
+end
+
+if text and text:match("^(تعطيل ملف) (.*)(.lua)$") and DevTshake(msg) then
+local name_t = {string.match(text, "^(تعطيل ملف) (.*)(.lua)$")}
+local file = name_t[2]..'.lua'
+local file_bot = io.open("Tshake_Files/"..file,"r")
+if file_bot then
+io.close(file_bot)
+t = "*🗂┇ الملف » {"..file.."}\n📬┇ تم تعطيله وحذفه بنجاح \n✓*"
+else
+t = "*📬┇ بالتاكيد تم تعطيل وحذف ملف » {"..file.."} \n✓*"
+end
+local json_file, res = https.request("https://raw.githubusercontent.com/khzraje/files_tshake/master/files_tshake/"..file)
+if res == 200 then
+os.execute("rm -fr Tshake_Files/"..file)
+send(msg.chat_id_, msg.id_,t) 
+dofile('oras.lua')  
+else
+send(msg.chat_id_, msg.id_,"*📮┇ عذرا لا يوجد هكذا ملف في المتجر *\n") 
+end
+return false
+end
+if text and text:match("^(تفعيل ملف) (.*)(.lua)$") and DevTshake(msg) then
+local name_t = {string.match(text, "^(تفعيل ملف) (.*)(.lua)$")}
+local file = name_t[2]..'.lua'
+local file_bot = io.open("Tshake_Files/"..file,"r")
+if file_bot then
+io.close(file_bot)
+t = "*📬┇ بالتاكيد تم تنزيل وتفعيل ملف » {"..file.."} \n✓*"
+else
+t = "*🗂┇ الملف » {"..file.."}\n📬┇ تم تنزيله وتفعيله بنجاح \n💥*"
+end
+local json_file, res = https.request("https://raw.githubusercontent.com/khzraje/files_tshake/master/files_tshake/"..file)
+if res == 200 then
+local chek = io.open("Tshake_Files/"..file,'w+')
+chek:write(json_file)
+chek:close()
+send(msg.chat_id_, msg.id_,t) 
+dofile('oras.lua')  
+else
+send(msg.chat_id_, msg.id_,"*📮┇ عذرا لا يوجد هكذا ملف في المتجر *\n") 
+end
+return false
+end
+if text == "مسح جميع الملفات" and DevTshake(msg) then
+os.execute("rm -fr Tshake_Files/*")
+send(msg.chat_id_,msg.id_,"☑┇تم حذف جميع الملفات")
+return false
+end
 if text == 'نقل الاحصائيات' and DevTshake(msg) then
 local Users = database:smembers('tshake:'..bot_id.."userss")
 local Groups = database:smembers('tshake:'..bot_id..'groups') 
