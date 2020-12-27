@@ -32,10 +32,10 @@ o̷r̷a̷s̷                o̷r̷a̷s̷       o̷r̷a̷s̷         o̷r̷a̷s̷
 >> DEVELOPER > @khzraje
 ]].."\27[m")
 
-io.popen("mkdir Tshake_Files")
+io.popen("mkdir oras_Files")
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
-for v in io.popen('ls Tshake_Files'):lines() do
+for v in io.popen('ls oras_Files'):lines() do
 if v:match(".lua$") then
 i = i + 1
 t = t.."\27[39m"..i.."\27[36m".." - \27[10;32m"..v..",\27[m \n"
@@ -555,10 +555,10 @@ database:sadd(bot_id.."Tshake:Muted:User"..msg.chat_id_,msg.sender_user_id_)
 return false  
 end
 end  
-function Tshake_Files(msg)
-for v in io.popen('ls Tshake_Files'):lines() do
+function oras_Files(msg)
+for v in io.popen('ls oras_Files'):lines() do
 if v:match(".lua$") then
-plugin = dofile("Tshake_Files/"..v)
+plugin = dofile("oras_Files/"..v)
 if plugin.Tshake and msg then
 pre_msg = plugin.Tshake(msg)
 end
@@ -5733,7 +5733,7 @@ end
 if text == 'الملفات' and DevTshake(msg) then
 t = '☑┇جميع الملفات : \n ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ \n'
 i = 0
-for v in io.popen('ls Tshake_Files'):lines() do
+for v in io.popen('ls oras_Files'):lines() do
 if v:match(".lua$") then
 i = i + 1
 t = t..i..'*~ '..v..'*\n'
@@ -5743,7 +5743,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if DevTshake(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/tshakeab/files_tshake/master/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/khzraje/files_oras/master/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -5752,7 +5752,7 @@ local TextS = "\n📂┇اهلا بك في متجر ملفات اوراس \n📮
 local TextE = "\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n📌┇تدل علامة (✔) الملف مفعل\n".."📌┇تدل علامة (✖) الملف معطل\n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
-local Check_File_is_Found = io.open("Tshake_Files/"..name,"r")
+local Check_File_is_Found = io.open("oras_Files/"..name,"r")
 if Check_File_is_Found then
 io.close(Check_File_is_Found)
 CeckFile = "(✔)"
@@ -5774,16 +5774,16 @@ end
 if text and text:match("^(تعطيل ملف) (.*)(.lua)$") and DevTshake(msg) then
 local name_t = {string.match(text, "^(تعطيل ملف) (.*)(.lua)$")}
 local file = name_t[2]..'.lua'
-local file_bot = io.open("Tshake_Files/"..file,"r")
+local file_bot = io.open("oras_Files/"..file,"r")
 if file_bot then
 io.close(file_bot)
 t = "*🗂┇ الملف » {"..file.."}\n📬┇ تم تعطيله وحذفه بنجاح \n✓*"
 else
 t = "*📬┇ بالتاكيد تم تعطيل وحذف ملف » {"..file.."} \n✓*"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/tshakeab/files_tshake/master/files_tshake/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/khzraje/files_oras/master/files_oras/"..file)
 if res == 200 then
-os.execute("rm -fr Tshake_Files/"..file)
+os.execute("rm -fr oras_Files/"..file)
 send(msg.chat_id_, msg.id_,t) 
 dofile('oras.lua')  
 else
@@ -5794,16 +5794,16 @@ end
 if text and text:match("^(تفعيل ملف) (.*)(.lua)$") and DevTshake(msg) then
 local name_t = {string.match(text, "^(تفعيل ملف) (.*)(.lua)$")}
 local file = name_t[2]..'.lua'
-local file_bot = io.open("Tshake_Files/"..file,"r")
+local file_bot = io.open("oras_Files/"..file,"r")
 if file_bot then
 io.close(file_bot)
 t = "*📬┇ بالتاكيد تم تنزيل وتفعيل ملف » {"..file.."} \n✓*"
 else
 t = "*🗂┇ الملف » {"..file.."}\n📬┇ تم تنزيله وتفعيله بنجاح \n💥*"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/tshakeab/files_tshake/master/files_tshake/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/khzraje/files_oras/master/files_oras/"..file)
 if res == 200 then
-local chek = io.open("Tshake_Files/"..file,'w+')
+local chek = io.open("oras_Files/"..file,'w+')
 chek:write(json_file)
 chek:close()
 send(msg.chat_id_, msg.id_,t) 
@@ -5814,7 +5814,7 @@ end
 return false
 end
 if text == "مسح جميع الملفات" and DevTshake(msg) then
-os.execute("rm -fr Tshake_Files/*")
+os.execute("rm -fr oras_Files/*")
 send(msg.chat_id_,msg.id_,"☑┇تم حذف جميع الملفات")
 return false
 end
@@ -6975,7 +6975,7 @@ data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..Name_Bot..
 end
 ------------------------------------------------------------------------
 Tshake_Started_Bot(msg,data)
-Tshake_Files(msg)
+oras_Files(msg)
 elseif (data.ID == "UpdateMessageEdited") then
 local msg = data
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.message_id_)},function(extra, result, success)
