@@ -5787,7 +5787,7 @@ os.execute("rm -fr Tshake_Files/"..file)
 send(msg.chat_id_, msg.id_,t) 
 dofile('oras.lua')  
 else
-send(msg.chat_id_, msg.id_,"*📮┇ عذرا لا يوجد هكذا ملف في المتجر *\n") 
+send(msg.chat_id_, msg.id_,"*📮┇ عذرا لا يوجد هاكذا ملف في المتجر *\n") 
 end
 return false
 end
@@ -5809,7 +5809,7 @@ chek:close()
 send(msg.chat_id_, msg.id_,t) 
 dofile('oras.lua')  
 else
-send(msg.chat_id_, msg.id_,"*📮┇ عذرا لا يوجد هكذا ملف في المتجر *\n") 
+send(msg.chat_id_, msg.id_,"*📮┇ عذرا لا يوجد هاكذا ملف في المتجر *\n") 
 end
 return false
 end
