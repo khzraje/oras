@@ -4194,7 +4194,8 @@ end
 end
 
 if text == "تفعيل اطردني" and Owner(msg) then   
-database:del(bot_id.."Tshake:Kick:Me"..msg.chat_id_)  
+database:del(bot_id.."Tshake:Kick:Me"..msg.chat_id_)
+Text = "\n📫┇تم تفعيل امر اطردني"
 send(msg.chat_id_, msg.id_,Text) 
 end
 if text == "تعطيل اطردني" and Owner(msg) then  
